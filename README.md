@@ -4,7 +4,6 @@
 
 **Codex-style element annotation for DeepSeek Harness.** Open a local dev server or a static page from your workspace, click an element, Shift-drag a region, tweak styles with a live preview, and send the whole review into the current conversation in one message.
 
-[![check](https://github.com/xulianglong-akk/dsh-lens/actions/workflows/check.yml/badge.svg)](https://github.com/xulianglong-akk/dsh-lens/actions/workflows/check.yml)
 [![license](https://img.shields.io/badge/license-MIT-7dd3fc.svg)](LICENSE)
 [![node](https://img.shields.io/badge/node-%E2%89%A520-7dd3fc.svg)](package.json)
 
