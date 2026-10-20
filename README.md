@@ -4,9 +4,21 @@
 
 **Codex-style element annotation for DeepSeek Harness.** Open a local dev server or a static page from your workspace, click an element, Shift-drag a region, tweak styles with a live preview, and send the whole review into the current conversation in one message.
 
-![样式面板实时预览](docs/img/02-style-panel.png)
+[![check](https://github.com/xulianglong-akk/dsh-lens/actions/workflows/check.yml/badge.svg)](https://github.com/xulianglong-akk/dsh-lens/actions/workflows/check.yml)
+[![license](https://img.shields.io/badge/license-MIT-7dd3fc.svg)](LICENSE)
+[![node](https://img.shields.io/badge/node-%E2%89%A520-7dd3fc.svg)](package.json)
+
+**[在线演示 Live demo](https://xulianglong-akk.github.io/dsh-lens/)** — 三页静态站，可以直接试框选和跨页批注 · the same three pages, for trying region selection and cross-page review.
 
 [中文](#中文) · [English](#english)
+
+### 截图 / Screenshots
+
+| 框选区域 | 样式实时预览 |
+| --- | --- |
+| ![框选区域](docs/img/01-region-draft.png) | ![样式面板](docs/img/02-style-panel.png) |
+
+![真实页面上的区域批注与改字号](docs/img/03-real-host-region-and-style.png)
 
 ---
 
