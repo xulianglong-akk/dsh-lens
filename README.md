@@ -131,7 +131,8 @@ pnpm install
 | `lib/shim.js` | 注入预览页的 URL/WS 映射与导航上报 |
 | `scripts/install.mjs` / `scripts/rollback.mjs` | 一条命令安装 / 回滚 |
 | `test/host-harness.mjs` | 不启动 DSH 的宿主半侧自测台（detect / preview） |
-| `demo/` | 三页静态示例站，用来试框选和跨页批注 |
+| `docs/demo/` | 三页静态示例站，用来试框选和跨页批注（GitHub Pages 也发布这个目录） |
+| `CHANGELOG.md` / `CONTRIBUTING.md` / `SECURITY.md` | 变更记录、开发约定、安全边界 |
 
 ### 开发
 
