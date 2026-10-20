@@ -1,0 +1,50 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: JavaScript syntax
+        run: |
+          set -e
+          for file in lib/*.js scripts/*.mjs test/*.mjs; do
+            echo "checking $file"
+            node --check "$file"
+          done
+      - name: Manifests are valid
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('package.json', 'utf8')); console.log('package.json ok')"
+          test -s cordis.patch.yml
+      - name: Demo is self-contained
+        run: |
+          node -e "
+          const fs = require('fs')
+          for (const file of ['docs/demo/index.html', 'docs/demo/page-2.html', 'docs/demo/page-3.html']) {
+            const text = fs.readFileSync(file, 'utf8')
+            if (!text.includes('site.css')) throw new Error(file + ' does not link site.css')
+          }
+          console.log('demo ok')
+          "
+      - name: Host half loads
+        run: |
+          node -e "
+          import('./lib/index.js').then((mod) => {
+            if (mod.name !== 'dsh-lens') throw new Error('unexpected plugin name: ' + mod.name)
+            if (typeof mod.apply !== 'function') throw new Error('apply() is missing')
+            console.log('host half ok:', mod.name)
+          })
+          "
