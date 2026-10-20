@@ -1,0 +1,12 @@
+# Dependencies and local state
+node_modules/
+
+# DSH profile backups created by scripts/install.mjs
+_rollback/
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

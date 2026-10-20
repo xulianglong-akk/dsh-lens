@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>深空观测站 · 观测记录</title>
+<link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <span class="brand"><i class="dot"></i>DEEP SKY OBSERVATORY</span>
+      <nav class="nav">
+        <a href="index.html">总览</a>
+        <a href="page-2.html" aria-current="page">观测记录</a>
+        <a href="page-3.html">设备与排班</a>
+      </nav>
+    </div>
+
+    <span class="eyebrow">Logbook · 2026 / 10 / 20</span>
+    <h1>观测记录</h1>
+    <p class="lead">这一页是一张表：目标、时间、视宁度、备注。表头、单元格、标签、引用都适合拿来试「点元素」和「Shift 框选」。</p>
+
+    <h3>框选测试区</h3>
+    <p class="lead" style="margin-bottom: 18px; font-size: 14px;">三块面板大小不同、嵌套不同。按住 Shift 从左上拖到右下框住其中一块，松手后箭头会列出「框内元素」——看它抓到的层级对不对。</p>
+    <section class="grid" id="region-test">
+      <article class="card" id="panel-a" style="grid-column: span 2; padding: 26px 28px;">
+        <h2>面板 A · 大块，带嵌套</h2>
+        <p>外层是一张卡片；里面有标题、说明、一行标签，以及一个更深的内层框。</p>
+        <div style="margin: 14px 0; padding: 14px 16px; border-radius: 12px; background: rgba(125, 211, 252, .08); border: 1px dashed rgba(125, 211, 252, .4);">
+          <h3 style="margin: 0 0 6px;">内层框 A-1</h3>
+          <p style="margin: 0; color: var(--muted); font-size: 13.5px;">这一段是嵌套层里的文字，框选外层时应该也会被收进列表。</p>
+          <div class="tags" style="margin-top: 10px;">
+            <span class="tag">嵌套</span><span class="tag warm">两层</span>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">grid span 2</span><span class="tag">padding 26</span></div>
+      </article>
+
+      <article class="card" id="panel-b">
+        <h2>面板 B · 中等</h2>
+        <p>单列卡片，里面是一个三行小列表。</p>
+        <ul style="margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: 13.5px; line-height: 1.9;">
+          <li>第一行：视宁度采样</li>
+          <li>第二行：导星误差</li>
+          <li>第三行：对焦补偿</li>
+        </ul>
+      </article>
+
+      <article class="card" id="panel-c">
+        <h2>面板 C · 小块</h2>
+        <p>只有一块文字，用来验证「小框只抓到它自己」。</p>
+        <div><span class="value">1.06</span><span class="unit">arcsec</span></div>
+      </article>
+    </section>
+
+    <h3>今夜队列</h3>
+    <table>
+      <thead>
+        <tr><th>目标</th><th>类型</th><th>时段</th><th>视宁度</th><th>备注</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>M31 仙女座星系</td><td>星系</td><td class="num">19:40 – 20:25</td><td class="num">1.08</td><td>薄云掠过西北</td></tr>
+        <tr><td>NGC 7000 北美洲星云</td><td>发射星云</td><td class="num">20:35 – 21:30</td><td class="num">1.15</td><td>换窄带滤镜</td></tr>
+        <tr><td>M45 昴星团</td><td>疏散星团</td><td class="num">21:40 – 22:10</td><td class="num">1.06</td><td>短曝光堆栈</td></tr>
+        <tr><td>木星</td><td>行星</td><td class="num">22:20 – 23:00</td><td class="num">1.31</td><td>视宁度下降，降倍率</td></tr>
+      </tbody>
+    </table>
+
+    <h3>现场速记</h3>
+    <div class="grid">
+      <article class="card">
+        <h2>导星</h2>
+        <p>PHD2 平均误差 0.62″，两小时内无丢星。</p>
+        <div class="tags"><span class="tag">0.62″</span><span class="tag warm">偶发风抖</span></div>
+      </article>
+      <article class="card">
+        <h2>对焦</h2>
+        <p>温度每小时下降 0.8℃，每 40 分钟补一次焦。</p>
+        <div class="tags"><span class="tag">ΔT -0.8℃/h</span></div>
+      </article>
+      <article class="card">
+        <h2>存储</h2>
+        <p>今晚预计产生 42 GB，剩余空间足够。</p>
+        <div class="tags"><span class="tag">42 GB</span><span class="tag">SSD 1.8 TB 空闲</span></div>
+      </article>
+    </div>
+
+    <blockquote>「把目标列表念一遍，确认没有和月亮撞车。」—— 交接班提醒</blockquote>
+
+    <div class="row">
+      <button class="btn" type="button">记录已归档</button>
+      <button class="btn ghost" type="button">补一条备注</button>
+    </div>
+
+    <div class="pager">
+      <a href="index.html">← 上一页：总览</a>
+      <a href="page-3.html">下一页：设备与排班 →</a>
+    </div>
+
+    <div class="footer">
+      <span>© 深空观测站</span>
+      <span>第 47 次值守</span>
+    </div>
+  </main>
+</body>
+</html>

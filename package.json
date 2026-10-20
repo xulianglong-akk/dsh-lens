@@ -1,0 +1,74 @@
+{
+  "name": "dsh-lens",
+  "version": "0.1.0",
+  "description": "Codex-style element annotation for DeepSeek Harness: workspace-scoped preview, Shift box selection, live style panel, Ctrl+click instant send, cross-page review sent as one message.",
+  "type": "module",
+  "license": "MIT",
+  "author": "xulianglong-akk",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "annotation",
+    "codex",
+    "ui-review",
+    "devtools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xulianglong-akk/dsh-lens.git"
+  },
+  "homepage": "https://github.com/xulianglong-akk/dsh-lens#readme",
+  "bugs": {
+    "url": "https://github.com/xulianglong-akk/dsh-lens/issues"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/shim.js",
+    "lib/overlay.js",
+    "cordis.patch.yml",
+    "scripts",
+    "demo",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-api-session-controller"
+      ],
+      "platform": "web"
+    }
+  }
+}

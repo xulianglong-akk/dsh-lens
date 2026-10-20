@@ -1,0 +1,4 @@
+# Applied as the package's dsh.bundle.patch layer when installed into a profile.
+- insert:
+    - id: dsh-lens
+      name: dsh-lens

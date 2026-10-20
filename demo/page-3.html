@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>深空观测站 · 设备与排班</title>
+<link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <span class="brand"><i class="dot"></i>DEEP SKY OBSERVATORY</span>
+      <nav class="nav">
+        <a href="index.html">总览</a>
+        <a href="page-2.html">观测记录</a>
+        <a href="page-3.html" aria-current="page">设备与排班</a>
+      </nav>
+    </div>
+
+    <span class="eyebrow">Hardware &amp; Roster</span>
+    <h1>设备与排班</h1>
+    <p class="lead">这一页放表单控件：输入框、下拉、多行文本、复选框、按钮。用来试「点输入框/标签」和「框选整块表单」。</p>
+
+    <h3>今晚设备</h3>
+    <div class="grid">
+      <article class="card">
+        <h2>主镜</h2>
+        <p>口径 254 mm 反射式，焦距 1200 mm。</p>
+        <div><span class="value">f/4.7</span><span class="unit">焦比</span></div>
+      </article>
+      <article class="card">
+        <h2>相机</h2>
+        <p>APS-C 制冷 CMOS，今晚设定 -10℃。</p>
+        <div><span class="value">2600</span><span class="unit">万像素</span></div>
+      </article>
+      <article class="card">
+        <h2>赤道仪</h2>
+        <p>载重余量 38%，配重已按新镜筒调整。</p>
+        <div><span class="value">38</span><span class="unit">% 余量</span></div>
+      </article>
+    </div>
+
+    <h3>排班登记</h3>
+    <div class="field">
+      <label for="observer">值班人</label>
+      <input id="observer" type="text" value="林" />
+    </div>
+    <div class="field">
+      <label for="slot">时段</label>
+      <select id="slot">
+        <option>19:30 – 21:30</option>
+        <option>21:30 – 23:30</option>
+        <option>23:30 – 01:30</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="note">交接备注</label>
+      <textarea id="note" rows="3">露水偏重，注意加热带。</textarea>
+    </div>
+
+    <div class="row" style="margin-bottom: 26px;">
+      <label class="field" style="flex-direction: row; align-items: center; gap: 8px; margin: 0;">
+        <input type="checkbox" checked />
+        <span>已检查镜头结露</span>
+      </label>
+      <label class="field" style="flex-direction: row; align-items: center; gap: 8px; margin: 0;">
+        <input type="checkbox" />
+        <span>已更换干燥剂</span>
+      </label>
+    </div>
+
+    <div class="row">
+      <button class="btn" type="button">提交排班</button>
+      <button class="btn ghost" type="button">重置</button>
+    </div>
+
+    <blockquote>「设备不会说话，但它会用一张糊掉的照片提醒你：别忘了调焦。」</blockquote>
+
+    <div class="pager">
+      <a href="page-2.html">← 上一页：观测记录</a>
+      <a href="index.html">回到总览 →</a>
+    </div>
+
+    <div class="footer">
+      <span>© 深空观测站</span>
+      <span>设备档案 v3.2</span>
+    </div>
+  </main>
+</body>
+</html>
